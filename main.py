@@ -2,30 +2,30 @@
 import sys
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
-from clockform import Ui_Form
+import clockform
+import setting
 import datetime
 import subprocess
 import Twipost
 
 
-class Win(QDialog):
+class mainwin(QDialog):
     timer = pyqtSignal()
 
     def __init__(self, parent=None):
-        super(Win, self).__init__(parent)
+        super(mainwin, self).__init__(parent)
         self.flag = 0
-        self.al = datetime.time(19, 1)
+        self.al = datetime.time(6, 00)
         self.CFrom()
         self.ButSig('Pushed')
         self.TimeSig()
 
     def CFrom(self):
-        self.ui = Ui_Form()
+        self.ui = clockform.Ui_Form()
         self.ui.setupUi(self)
 
     def ButSig(self, state):
-        self.ui.pushButton.clicked.connect(lambda:
-                                           Twipost.Twi_aupos(state))
+        self.ui.pushButton.clicked.connect(self.MakeWin)
         self.ui.pushButton_2.clicked.connect(app.quit)
 
     def TimeSig(self):
@@ -37,7 +37,7 @@ class Win(QDialog):
                                            strftime('%H:%M:%S')))
         self.timer.timeout.connect(lambda:
                                    self.Alarm('TIME!!'))
-        self.timer.start(1000)  # ミリ秒単位
+        self.timer.start(200)  # ミリ秒単位
 
     def Alarm(self, state):
         self.ti = datetime.datetime.now()
@@ -49,8 +49,24 @@ class Win(QDialog):
         else:
             self.flag = 0
 
+    def MakeWin(self):
+        self.sub = SubWin()
+        self.sub.show()
+
+
+class SubWin(QDialog):
+    def __init__(self, parent=None):
+        super(SubWin, self).__init__(parent)
+        self.ui = setting.Ui_Dialog()
+        self.ui.setupUi(self)
+        self.clbutton()
+
+    def clbutton(self):
+        self.ui.pushButton.clicked.connect(self.close)
+
+
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-    window = Win()
+    window = mainwin()
     window.show()
     sys.exit(app.exec_())
