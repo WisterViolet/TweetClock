@@ -4,6 +4,7 @@ from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 import clockform
 import setting
+import SetAlarm
 import datetime
 import subprocess
 import Twipost
@@ -57,12 +58,31 @@ class mainwin(QDialog):
 class SubWin(QDialog):
     def __init__(self, parent=None):
         super(SubWin, self).__init__(parent)
-        self.ui = setting.Ui_Dialog()
+        self.ui = setting.Ui_Form()
+        self.ui.setupUi(self)
+        self.clbutton()
+        self.Butsig()
+
+    def clbutton(self):
+        self.ui.pushButton_3.clicked.connect(self.close)
+
+    def Butsig(self):
+        self.ui.pushButton.clicked.connect(self.makeAlarm)
+
+    def makeAlarm(self):
+        self.Alarm = AlarmSetting()
+        self.Alarm.show()
+
+
+class AlarmSetting(QDialog):
+    def __init__(self, parent=None):
+        super(AlarmSetting, self).__init__(parent)
+        self.ui = SetAlarm.Ui_Form()
         self.ui.setupUi(self)
         self.clbutton()
 
     def clbutton(self):
-        self.ui.pushButton.clicked.connect(self.close)
+        self.ui.pushButton_5.clicked.connect(self.close)
 
 
 if __name__ == '__main__':
