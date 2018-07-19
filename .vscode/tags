@@ -1,0 +1,44 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AT	../keyAPI.py	/^AT = '925139193101131776-XycS8jcoWsIIxxSZBd71bP1MjUtdKq7'$/;"	kind:variable	line:3
+ATS	../keyAPI.py	/^ATS = 'cHyqXK6yCtVQODAOakJ1vlInYnbxXGKGkrVjzuHt0vIwf'$/;"	kind:variable	line:4
+Alarm	../main.py	/^    def Alarm(self, state):$/;"	kind:member	line:43
+AlarmSetting	../main.py	/^class AlarmSetting(QDialog):$/;"	kind:class	line:77
+ButSig	../main.py	/^    def ButSig(self, state):$/;"	kind:member	line:28
+Butsig	../main.py	/^    def Butsig(self):$/;"	kind:member	line:69
+CFrom	../main.py	/^    def CFrom(self):$/;"	kind:member	line:24
+CK	../keyAPI.py	/^CK = 'oRzajupUquXajJ8G1VLRStMRz'$/;"	kind:variable	line:1
+CS	../keyAPI.py	/^CS = 'zABW571nrrFnYIrVOoC6YtOnYKICOWrhs000EytOdgtU38ksQB'$/;"	kind:variable	line:2
+MakeWin	../main.py	/^    def MakeWin(self):$/;"	kind:member	line:53
+SetAlarm.py	../SetAlarm.py	1;"	kind:file	line:1
+SubWin	../main.py	/^class SubWin(QDialog):$/;"	kind:class	line:58
+TimeSig	../main.py	/^    def TimeSig(self):$/;"	kind:member	line:32
+Twi_aupos	../Twipost.py	/^def Twi_aupos(state):$/;"	kind:function	line:5
+Twipost.py	../Twipost.py	1;"	kind:file	line:1
+Ui_Form	../SetAlarm.py	/^class Ui_Form(object):$/;"	kind:class	line:11
+Ui_Form	../clockform.py	/^class Ui_Form(object):$/;"	kind:class	line:11
+Ui_Form	../setting.py	/^class Ui_Form(object):$/;"	kind:class	line:11
+__init__	../main.py	/^    def __init__(self, parent=None):$/;"	kind:member	line:16
+__init__	../main.py	/^    def __init__(self, parent=None):$/;"	kind:member	line:59
+__init__	../main.py	/^    def __init__(self, parent=None):$/;"	kind:member	line:78
+app	../main.py	/^    app = QApplication(sys.argv)$/;"	kind:variable	line:89
+clbutton	../main.py	/^    def clbutton(self):$/;"	kind:member	line:66
+clbutton	../main.py	/^    def clbutton(self):$/;"	kind:member	line:84
+clockform.py	../clockform.py	1;"	kind:file	line:1
+keyAPI.py	../keyAPI.py	1;"	kind:file	line:1
+main.py	../main.py	1;"	kind:file	line:1
+mainwin	../main.py	/^class mainwin(QDialog):$/;"	kind:class	line:13
+makeAlarm	../main.py	/^    def makeAlarm(self):$/;"	kind:member	line:72
+retranslateUi	../SetAlarm.py	/^    def retranslateUi(self, Form):$/;"	kind:member	line:55
+retranslateUi	../clockform.py	/^    def retranslateUi(self, Form):$/;"	kind:member	line:31
+retranslateUi	../setting.py	/^    def retranslateUi(self, Form):$/;"	kind:member	line:40
+setting.py	../setting.py	1;"	kind:file	line:1
+setupUi	../SetAlarm.py	/^    def setupUi(self, Form):$/;"	kind:member	line:12
+setupUi	../clockform.py	/^    def setupUi(self, Form):$/;"	kind:member	line:12
+setupUi	../setting.py	/^    def setupUi(self, Form):$/;"	kind:member	line:12
+timer	../main.py	/^    timer = pyqtSignal()$/;"	kind:variable	line:14
+window	../main.py	/^    window = mainwin()$/;"	kind:variable	line:90
